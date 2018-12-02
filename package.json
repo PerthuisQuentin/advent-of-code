@@ -1,0 +1,23 @@
+{
+	"name": "advent-of-code",
+	"version": "0.0.0",
+	"description": "Codes for Advent Of Code",
+	"main": "index.js",
+	"scripts": {
+		"test": "mocha"
+	},
+	"author": "Quentin Perthuis",
+	"license": "MIT",
+	"homepage": "https://github.com/PerthuisQuentin/advent-of-code#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/PerthuisQuentin/advent-of-code.git"
+	},
+	"bugs": {
+		"url": "https://github.com/PerthuisQuentin/advent-of-code/issues"
+	},
+	"dependencies": {
+		"mocha": "^5.2.0",
+		"should": "^13.2.3"
+	}
+}
