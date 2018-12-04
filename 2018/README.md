@@ -8,4 +8,4 @@
 
 - Day #3 : [Part 1](day-3-part-1.js) - [Part 2](day-3-part-2.js)
 
-- Day #4 : [Part 1](day-4-part-1.js)
+- Day #4 : [Part 1](day-4-part-1.js) - [Part 2](day-4-part-2.js)
