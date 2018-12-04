@@ -21,20 +21,29 @@ describe('Advent of code', () => {
 				if (!Fs.lstatSync(dayTestPath).isDirectory()) return
 
 				describe(dayFile, () => {
-					var dayCode = require(Path.join(codePath, yearFile, dayFile + '.js'))
+					// Foreach exercice part
+					Fs.readdirSync(dayTestPath).forEach(partFile => {
+						const partTestPath = Path.join(dayTestPath, partFile)
 
-					// Foreach test
-					Fs.readdirSync(dayTestPath).forEach(testFile => {
-						const testPath = Path.join(dayTestPath, testFile)
-						const content = Fs.readFileSync(testPath, { encoding: 'utf-8' })
-						
-						const rows = content.split('\n')
-						const separationIndex = rows.indexOf('')
-						const input = rows.slice(0, separationIndex)
-						const output = rows.slice(separationIndex + 1)
+						if (!Fs.lstatSync(partTestPath).isDirectory()) return
 
-						it(`${Path.basename(testFile, '.txt')} : Should return ${output}`, () => {
-							output.should.containEql(dayCode(input))
+						describe(partFile, () => {
+							var partCode = require(Path.join(codePath, yearFile, dayFile, partFile + '.js'))
+		
+							// Foreach test
+							Fs.readdirSync(partTestPath).forEach(testFile => {
+								const testPath = Path.join(partTestPath, testFile)
+								const content = Fs.readFileSync(testPath, { encoding: 'utf-8' })
+								
+								const rows = content.split('\n')
+								const separationIndex = rows.indexOf('')
+								const input = rows.slice(0, separationIndex)
+								const output = rows.slice(separationIndex + 1)
+		
+								it(`${Path.basename(testFile, '.txt')} : Should return ${output}`, () => {
+									output.should.containEql(partCode(input))
+								})
+							})
 						})
 					})
 				})
