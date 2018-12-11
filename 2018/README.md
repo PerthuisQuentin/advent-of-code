@@ -12,3 +12,4 @@ Day | Parts
 #8  | [Part 1](day-8/part-1.js) - [Part 2](day-8/part-2.js)
 #9  | [Part 1](day-9/part-1.js) - [Part 2](day-9/part-2.js)
 #10  | [Part 1](day-10/part-1.js) - [Part 2](day-10/part-2.js)
+#11  | [Part 1](day-11/part-1.js) - [Part 2](day-11/part-2.js)
