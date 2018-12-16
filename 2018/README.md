@@ -16,3 +16,4 @@ Day | Parts
 #12  | [Part 1](day-12/part-1.js) - [Part 2](day-12/part-2.js)
 #14  | [Part 1](day-14/part-1.js) - [Part 2](day-14/part-2.js)
 #15  | [Part 1](day-15/part-1.js) - [Part 2](day-15/part-2.js)
+#16  | [Part 1](day-16/part-1.js) - [Part 2](day-16/part-2.js)
