@@ -1,6 +1,6 @@
 # Advent of code
 
-- Challenge : [Advent of code](https://battledev.blogdumoderateur.com)
+- Challenge : [Advent of code](https://adventofcode.com/)
 
 ## Codes
 
@@ -21,4 +21,26 @@ npm install
 
 ```
 npm test
+```
+
+Options
+
+```
+--year <string>
+	Use a string as filter on years
+
+--day <string>
+	Use a string as filter on days
+
+--part <string>
+	Use a string as filter on parts
+
+--test <string>
+	Use a string as filter on tests
+```
+
+Example
+
+```
+npm test -- --year 2019 --day 05 --part 2 --test 01
 ```

@@ -4,7 +4,7 @@
 	"description": "Codes for Advent Of Code",
 	"main": "index.js",
 	"scripts": {
-		"test": "mocha ./test/test.js --slow 0 --timeout 0"
+		"test": "mocha ./test/index.js"
 	},
 	"author": "Quentin Perthuis",
 	"license": "MIT",
@@ -17,7 +17,8 @@
 		"url": "https://github.com/PerthuisQuentin/advent-of-code/issues"
 	},
 	"dependencies": {
-		"mocha": "^5.2.0",
-		"should": "^13.2.3"
+		"mocha": "^6.2.2",
+		"should": "^13.2.3",
+		"yargs": "^15.0.2"
 	}
 }
