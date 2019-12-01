@@ -22,7 +22,7 @@ const partSettings = {
 	text: 'Part'
 }
 const testSettings = {
-	regex: /test-[0-9]+/,
+	regex: /test-[0-9a-z]+/,
 	option: 'test',
 	text: 'Test'
 }
