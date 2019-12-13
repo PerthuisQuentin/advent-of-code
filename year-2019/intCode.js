@@ -257,6 +257,10 @@ class IntCode {
 		return this.outputs.slice(-amount)
 	}
 
+	clearOutputs() {
+		this.outputs = []
+	}
+
 	getNextOperation() {
 		const operation = this.getValueAt(this.programIndex)
 		const thirdParamMode = Math.floor(operation / 10000)
