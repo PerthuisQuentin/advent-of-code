@@ -43,6 +43,19 @@ class Grid {
 		this.grid[position.x][position.y] = value
 	}
 
+	getNeighborsPosition(position) {
+		return [
+			{ x: position.x - 1, y: position.y },
+			{ x: position.x, y: position.y - 1 },
+			{ x: position.x + 1, y: position.y },
+			{ x: position.x, y: position.y + 1 }
+		]
+	}
+
+	getNeighbors(position) {
+		return this.getNeighborsPosition(position).map(position => this.getCell(position))
+	}
+
 	getGridArray() {
 		const grid = []
 		for (let y = this.minY - 1; y < this.maxY + 1; y++) {
