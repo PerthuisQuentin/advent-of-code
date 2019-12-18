@@ -58,15 +58,19 @@ class Grid {
 
 	getGridArray() {
 		const grid = []
-		for (let y = this.minY - 1; y < this.maxY + 1; y++) {
+		for (let y = this.minY - 1; y <= this.maxY + 1; y++) {
 			const row = []
-			for (let x = this.minX - 1; x < this.maxX + 1; x++) {
+			for (let x = this.minX - 1; x <= this.maxX + 1; x++) {
 				const cell = this.grid[x] && this.grid[x][y]
 				row.push(cell !== undefined ? cell : this.defaultCell)
 			}
 			grid.push(row)
 		}
 		return grid
+	}
+
+	getFlatGridArray() {
+		return this.getGridArray().reduce((result, current) => result.concat(current))
 	}
 
 	toString() {
@@ -92,6 +96,16 @@ class Grid {
 			}
 		}
 		return count
+	}
+
+	getAllPositionOf(value) {
+		let result = []
+		for (let x in this.grid) {
+			for (let y in this.grid[x]) {
+				if (this.grid[x][y] === value) result.push({ x: Number(x), y: Number(y) })
+			}
+		}
+		return result
 	}
 }
 
