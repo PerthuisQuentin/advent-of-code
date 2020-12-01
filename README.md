@@ -6,7 +6,13 @@
 
 Codes for the previous Advent of code editions
 
+- [2017 Edition](2017/README.md)
+
 - [2018 Edition](2018/README.md)
+
+- [2019 Edition](2019/README.md)
+
+- [2020 Edition](2020/README.md)
 
 ## How to use
 
