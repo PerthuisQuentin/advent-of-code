@@ -1,5 +1,5 @@
 const contestResponse = input => {
-		const entries = input.map(Number)
+	const entries = input.map(Number)
 
 	let searchedEntries
 
