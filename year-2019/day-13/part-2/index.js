@@ -1,7 +1,7 @@
 const Chalk = require('chalk')
 
 const IntCode = require('../../intCode')
-const Grid = require('../../grid')
+const Grid = require('../../../utils/grid')
 
 const EMPTY = 0
 const WALL = 1
