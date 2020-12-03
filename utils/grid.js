@@ -43,6 +43,15 @@ class Grid {
 		this.grid[position.x][position.y] = value
 	}
 
+	getBounds() {
+		return {
+			minX: this.minX,
+			minY: this.minY,
+			maxX: this.maxX,
+			maxY: this.maxY
+		}
+	}
+
 	getNeighborsPosition(position) {
 		return [
 			{ x: position.x - 1, y: position.y },
