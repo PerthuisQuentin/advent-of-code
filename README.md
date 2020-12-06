@@ -2,7 +2,7 @@
 
 - Challenge : [Advent of code](https://adventofcode.com/)
 
-## Codes
+# Codes
 
 Codes for the previous Advent of code editions
 
@@ -16,16 +16,16 @@ Codes for the previous Advent of code editions
 
 - [2020 Edition](2020/README.md)
 
-## How to use
+# How to use
 
-### Install
+## Install
 
 ```
 git clone https://github.com/PerthuisQuentin/battle-dev.git
 npm install
 ```
 
-### Run tests
+## Run tests
 
 ```
 npm test
@@ -51,4 +51,26 @@ Example
 
 ```
 npm test -- --year 2019 --day 05 --part 2 --test 01
+```
+
+## Init day files
+
+```
+npm run initDay
+```
+
+Options
+
+```
+--year <string>
+	year number (2015, 2016, etc...)
+
+--day <string>
+	day number (1, 2, 3, etc...)
+```
+
+Example
+
+```
+npm run initDay -- --year 2019 --day 5
 ```

@@ -4,7 +4,8 @@
 	"description": "Codes for Advent Of Code",
 	"main": "index.js",
 	"scripts": {
-		"test": "mocha ./test/index.js --slow 0 --timeout 0"
+		"test": "mocha ./test/index.js --slow 0 --timeout 0",
+		"initDay": "node ./scripts/initDay"
 	},
 	"author": "Quentin Perthuis",
 	"license": "MIT",
