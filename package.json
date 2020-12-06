@@ -5,7 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "mocha ./test/index.js --slow 0 --timeout 0",
-		"initDay": "node ./scripts/initDay"
+		"initDay": "node ./scripts/initDay",
+		"updateDaysList": "node ./scripts/updateDaysList"
 	},
 	"author": "Quentin Perthuis",
 	"license": "MIT",
