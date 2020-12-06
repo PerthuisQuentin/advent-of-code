@@ -7,3 +7,4 @@ Day | Parts
 #3  | [Part 1](day-03/part-1/index.js) - [Part 2](day-03/part-2/index.js)
 #4  | [Part 1](day-04/part-1/index.js) - [Part 2](day-04/part-2/index.js)
 #5  | [Part 1](day-05/part-1/index.js) - [Part 2](day-05/part-2/index.js)
+#6  | [Part 1](day-06/part-1/index.js) - [Part 2](day-06/part-2/index.js)
