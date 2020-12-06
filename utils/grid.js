@@ -43,6 +43,26 @@ class Grid {
 		this.grid[position.x][position.y] = value
 	}
 
+	applyOnCell(position, callback) {
+		this.setCell(position, callback(this.getCell(position)))
+	}
+
+	setSubGrid(positionA, positionB, value) {
+		for (let x = positionA.x; x <= positionB.x; x++) {
+			for (let y = positionA.y; y <= positionB.y; y++) {
+				this.setCell({ x, y }, value)
+			}
+		}
+	}
+
+	applyOnSubGrid(positionA, positionB, callback) {
+		for (let x = positionA.x; x <= positionB.x; x++) {
+			for (let y = positionA.y; y <= positionB.y; y++) {
+				this.applyOnCell({ x, y}, callback)
+			}
+		}
+	}
+
 	getBounds() {
 		return {
 			minX: this.minX,
@@ -105,6 +125,14 @@ class Grid {
 			}
 		}
 		return count
+	}
+
+	forEach(callback) {
+		for (let x in this.grid) {
+			for (let y in this.grid[x]) {
+				callback(this.grid[x][y])
+			}
+		}
 	}
 
 	getAllPositionOf(value) {
