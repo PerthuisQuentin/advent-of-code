@@ -6,6 +6,30 @@ class Grid {
 		this.minY = 0
 		this.maxX = 0
 		this.maxY = 0
+		this.fixedBounds = false
+	}
+
+	static clone(gridToClone) {
+		if (!(gridToClone instanceof Grid)) throw new Error('Not a grid instance')
+		const newGrid = new Grid(gridToClone.defaultCell)
+		newGrid.minX = gridToClone.minX
+		newGrid.minY = gridToClone.minY
+		newGrid.maxX = gridToClone.maxX
+		newGrid.maxY = gridToClone.maxY
+		gridToClone.forEach((cell, position) => newGrid.setCell(position, cell))
+		newGrid.fixedBounds = gridToClone.fixedBounds
+		return newGrid
+	}
+
+	parsePosition(position) {
+		return {
+			x: Number(position.x),
+			y: Number(position.y)
+		}
+	}
+
+	setFixedBounds(value) {
+		this.fixedBounds = value
 	}
 
 	updateBounds(position) {
@@ -13,6 +37,15 @@ class Grid {
 		if (position.x > this.maxX) this.maxX = position.x
 		if (position.y < this.minY) this.minY = position.y
 		if (position.y > this.maxY) this.maxY = position.y
+	}
+
+	isOutsideBounds(position) {
+		return (
+			position.x < this.minX ||
+			position.x > this.maxX ||
+			position.y < this.minY ||
+			position.y > this.maxY
+		)
 	}
 
 	getRow(x) {
@@ -34,11 +67,13 @@ class Grid {
 	}
 
 	getCell(position) {
+		if (this.isOutsideBounds(position) && this.fixedBounds) return this.defaultCell
 		this.verifyCell(position)
 		return this.grid[position.x][position.y]
 	}
 
 	setCell(position, value) {
+		if (this.isOutsideBounds(position) && this.fixedBounds) return
 		this.verifyCell(position)
 		this.grid[position.x][position.y] = value
 	}
@@ -81,8 +116,22 @@ class Grid {
 		]
 	}
 
+	getNeighborsPositionWithDiagonals(position) {
+		return [
+			...this.getNeighborsPosition(position),
+			{ x: position.x - 1, y: position.y -1 },
+			{ x: position.x + 1, y: position.y - 1 },
+			{ x: position.x + 1, y: position.y + 1 },
+			{ x: position.x - 1, y: position.y + 1 }
+		]
+	}
+
 	getNeighbors(position) {
 		return this.getNeighborsPosition(position).map(position => this.getCell(position))
+	}
+
+	getNeighborsWithDiagonals(position) {
+		return this.getNeighborsPositionWithDiagonals(position).map(position => this.getCell(position))
 	}
 
 	getGridArray() {
@@ -130,7 +179,7 @@ class Grid {
 	forEach(callback) {
 		for (let x in this.grid) {
 			for (let y in this.grid[x]) {
-				callback(this.grid[x][y])
+				callback(this.grid[x][y], { x: Number(x), y: Number(y) })
 			}
 		}
 	}
