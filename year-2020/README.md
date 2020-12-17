@@ -18,7 +18,7 @@ Day | Parts
 #14 | [Part 1](day-14/part-1/index.js) - [Part 2](day-14/part-2/index.js)
 #15 | [Part 1](day-15/part-1/index.js) - [Part 2](day-15/part-2/index.js)
 #16 | [Part 1](day-16/part-1/index.js) - [Part 2](day-16/part-2/index.js)
-#17 | Soon™                            - Soon™
+#17 | [Part 1](day-17/part-1/index.js) - [Part 2](day-17/part-2/index.js)
 #18 | Soon™                            - Soon™
 #19 | Soon™                            - Soon™
 #20 | Soon™                            - Soon™
