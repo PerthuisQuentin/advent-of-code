@@ -74,3 +74,22 @@ Example
 ```
 npm run initDay -- --year 2019 --day 5
 ```
+
+## Update day list
+
+```
+npm run updateDaysList
+```
+
+Options
+
+```
+--year <string>
+	year number (2015, 2016, etc...)
+```
+
+Example
+
+```
+npm run updateDaysList -- --year 2019
+```
