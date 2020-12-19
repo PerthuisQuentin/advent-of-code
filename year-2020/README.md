@@ -20,7 +20,7 @@ Day | Parts
 #16 | [Part 1](day-16/part-1/index.js) - [Part 2](day-16/part-2/index.js)
 #17 | [Part 1](day-17/part-1/index.js) - [Part 2](day-17/part-2/index.js)
 #18 | [Part 1](day-18/part-1/index.js) - [Part 2](day-18/part-2/index.js)
-#19 | Soon™                            - Soon™
+#19 | [Part 1](day-19/part-1/index.js) - [Part 2](day-19/part-2/index.js)
 #20 | Soon™                            - Soon™
 #21 | Soon™                            - Soon™
 #22 | Soon™                            - Soon™
