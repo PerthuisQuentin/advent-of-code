@@ -24,6 +24,6 @@ Day | Parts
 #20 | Soon™                            - Soon™
 #21 | Soon™                            - Soon™
 #22 | [Part 1](day-22/part-1/index.js) - [Part 2](day-22/part-2/index.js)
-#23 | Soon™                            - Soon™
+#23 | [Part 1](day-23/part-1/index.js) - [Part 2](day-23/part-2/index.js)
 #24 | Soon™                            - Soon™
 #25 | Soon™                            - Soon™
