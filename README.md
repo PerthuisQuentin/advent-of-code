@@ -6,17 +6,17 @@
 
 Codes for the previous Advent of code editions
 
-- [2015 Edition](2015/README.md)
+- [2015 Edition](year-2015/)
 
-- [2017 Edition](2017/README.md)
+- [2017 Edition](year-2017/)
 
-- [2018 Edition](2018/README.md)
+- [2018 Edition](year-2018/)
 
-- [2019 Edition](2019/README.md)
+- [2019 Edition](year-2019/)
 
-- [2020 Edition](2020/README.md)
+- [2020 Edition](year-2020/)
 
-- [2021 Edition](2021/README.md)
+- [2021 Edition](year-2021/)
 
 # How to use
 
