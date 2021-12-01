@@ -16,6 +16,8 @@ Codes for the previous Advent of code editions
 
 - [2020 Edition](2020/README.md)
 
+- [2021 Edition](2021/README.md)
+
 # How to use
 
 ## Install
