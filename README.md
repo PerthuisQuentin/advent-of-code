@@ -8,6 +8,8 @@ Codes for the previous Advent of code editions
 
 - [2015 Edition](year-2015/)
 
+- [2016 Edition](year-2016/)
+
 - [2017 Edition](year-2017/)
 
 - [2018 Edition](year-2018/)
