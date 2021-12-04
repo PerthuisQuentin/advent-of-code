@@ -1,12 +1,15 @@
+const Axios = require('axios')
 const Fs = require('fs')
 const Path = require('path')
 const argv = require('yargs').argv
+
+require('dotenv').config()
 
 const writeResults = (path, name, data) => new Promise((resolve, reject) => {
 	Fs.writeFile(Path.join(path, name), data, error => {
 		if (error) return reject(error)
 	})
-	
+
 	resolve()
 })
 
@@ -38,22 +41,33 @@ const indesJsContent = `const contestResponse = input => {
 
 module.exports = contestResponse`
 
-const test1Content = `input
+const test1Content = `--input--
 
-output`
+--output--
+something`
 
-const testFinalContent = `input
+const createTestFinalContent = input => `--input--
+${input}
 
-output`
+--output--
+something`
 
-Promise.resolve()
-    .then(writeResults(part1Path, 'index.js', indesJsContent))
-    .then(writeResults(part1Path, 'test-01.txt', test1Content))
-    .then(writeResults(part1Path, 'test-final.txt', testFinalContent))
-    .then(writeResults(part2Path, 'index.js', indesJsContent))
-    .then(writeResults(part2Path, 'test-01.txt', test1Content))
-    .then(writeResults(part2Path, 'test-final.txt', testFinalContent))
-	.then(() => {
-		console.log('Done !')
+Axios.get(`https://adventofcode.com/${argv.year}/day/${argv.day}/input`, {
+	headers: {
+		cookie: `session=${process.env.AOC_SESSION_COOKIE}`
+	}
+})
+	.then(response => {
+		const input = response.data
+		const testFinalContent = createTestFinalContent(input)
+
+		return Promise.resolve()
+			.then(writeResults(part1Path, 'index.js', indesJsContent))
+			.then(writeResults(part1Path, 'test-01.txt', test1Content))
+			.then(writeResults(part1Path, 'test-final.txt', testFinalContent))
+			.then(writeResults(part2Path, 'index.js', indesJsContent))
+			.then(writeResults(part2Path, 'test-01.txt', test1Content))
+			.then(writeResults(part2Path, 'test-final.txt', testFinalContent))
+			.then(() => console.log('Done !'))
 	})
 	.catch(console.error)
