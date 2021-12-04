@@ -1,3 +1,4 @@
+--input--
 lf AND lq -> ls
 iu RSHIFT 1 -> jn
 bo OR bu -> bv
@@ -338,4 +339,5 @@ NOT h -> i
 NOT hn -> ho
 he RSHIFT 5 -> hh
 
+--output--
 2797

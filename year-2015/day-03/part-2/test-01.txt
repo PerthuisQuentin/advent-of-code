@@ -1,3 +1,5 @@
+--input--
 ^>v<
 
+--output--
 3

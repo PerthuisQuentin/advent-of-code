@@ -1,7 +1,9 @@
+--input--
 ugknbfddgicrmopn
 aaa
 jchzalrnumimnmhp
 haegwjzuvuyypxyu
 dvszwmarrgswjxmb
 
+--output--
 2

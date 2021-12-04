@@ -1,3 +1,4 @@
+--input--
 sszojmmrrkwuftyv
 isaljhemltsdzlum
 fujcyucsrxgatisb
@@ -999,4 +1000,5 @@ iduapzclhhyfladn
 fbpyzxdfmkrtfaeg
 yzsmlbnftftgwadz
 
+--output--
 55

@@ -1,3 +1,5 @@
+--input--
 abcdef
 
+--output--
 609043

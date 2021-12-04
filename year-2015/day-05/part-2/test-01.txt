@@ -1,6 +1,8 @@
+--input--
 qjhvhtzxzqqjkmpb
 xxyxx
 uurcxstgmygtbstg
 ieodomkazucvgmuy
 
+--output--
 2

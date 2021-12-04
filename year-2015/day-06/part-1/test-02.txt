@@ -1,5 +1,7 @@
+--input--
 turn on 0,0 through 9,9
 turn off 0,0 through 3,3
 toggle 2,2 through 4,4
 
+--output--
 83

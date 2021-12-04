@@ -1,3 +1,5 @@
+--input--
 2x3x4
 
+--output--
 34

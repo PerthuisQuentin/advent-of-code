@@ -1,3 +1,4 @@
+--input--
 123 -> x
 456 -> y
 x AND b -> d
@@ -7,4 +8,5 @@ f RSHIFT 2 -> g
 NOT g -> h
 NOT h -> a
 
+--output--
 456
