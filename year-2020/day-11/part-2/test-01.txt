@@ -1,3 +1,4 @@
+--input--
 L.LL.LL.LL
 LLLLLLL.LL
 L.L.L..L..
@@ -9,4 +10,5 @@ LLLLLLLLLL
 L.LLLLLL.L
 L.LLLLL.LL
 
+--output--
 26

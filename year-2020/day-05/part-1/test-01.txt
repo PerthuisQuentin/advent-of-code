@@ -1,3 +1,5 @@
+--input--
 FBFBBFFRLR
 
+--output--
 357

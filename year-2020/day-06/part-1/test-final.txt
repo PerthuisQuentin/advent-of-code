@@ -1,3 +1,4 @@
+--input--
 qtmdwspah
 sqwdamhpt
 phwdaqsmt
@@ -2147,4 +2148,5 @@ qm
 m
 smg
 
+--output--
 6532

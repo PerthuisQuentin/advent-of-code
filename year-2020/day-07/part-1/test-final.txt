@@ -1,3 +1,4 @@
+--input--
 mirrored beige bags contain 1 drab brown bag, 3 dotted crimson bags.
 light lavender bags contain 5 clear teal bags, 2 wavy gold bags, 5 drab maroon bags, 2 posh cyan bags.
 drab gold bags contain 2 posh aqua bags, 3 dark olive bags.
@@ -593,4 +594,5 @@ wavy yellow bags contain 5 vibrant fuchsia bags, 3 drab fuchsia bags.
 drab teal bags contain 2 mirrored green bags.
 bright red bags contain 1 pale beige bag.
 
+--output--
 300

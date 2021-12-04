@@ -1,7 +1,7 @@
 const ruleRegex = /([ \w]+): ([\d]+)-([\d]+) or ([\d]+)-([\d]+)/
 
 const parseInput = input => {
-	const rulesEnd = input.findIndex(line => line === ';')
+	const rulesEnd = input.findIndex(line => line === '')
 	const rules = input
 		.slice(0, rulesEnd)
 		.map(line => {
@@ -16,7 +16,7 @@ const parseInput = input => {
 		})
 
 	const myTicket = input[rulesEnd + 2].split(',').map(Number)
-	
+
 	const tickets = input
 		.slice(rulesEnd + 5)
 		.map(line => line.split(',').map(Number))
@@ -54,7 +54,7 @@ const determineFieldsOrder = (rules, validTickets) => {
 		if (positionWithOnlyOneValidRule !== undefined) {
 			const foundRule = validRulesByPosition[positionWithOnlyOneValidRule][0]
 			rulesByPosition[positionWithOnlyOneValidRule] = foundRule
-			
+
 			Object
 				.keys(validRulesByPosition)
 				.forEach(position => {

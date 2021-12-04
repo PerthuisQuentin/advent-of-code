@@ -41,19 +41,19 @@ const parseRule = ruleLine => {
 }
 
 const parseInput = input => {
-	const index = input.findIndex(line => line === ';')
+	const index = input.findIndex(line => line === '')
 	const rules = new Map()
 
 	input
 		.slice(0, index)
 		.forEach(ruleLine => {
 			const rule = parseRule(ruleLine)
-			rules.set(rule.id, rule) 
+			rules.set(rule.id, rule)
 		})
 
 	const messages = input
 		.slice(index + 1)
-	
+
 	return {
 		rules,
 		messages

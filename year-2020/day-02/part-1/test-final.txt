@@ -1,3 +1,4 @@
+--input--
 1-4 m: mrfmmbjxr
 5-16 b: bbbbhbbbbpbxbbbcb
 7-8 x: qxrxmxccxxx
@@ -999,4 +1000,5 @@
 8-9 f: sgdcqfhfcfsflb
 3-7 g: gdgtnfggq
 
+--output--
 607

@@ -1,3 +1,4 @@
+--input--
 nop +0
 acc +1
 jmp +4
@@ -8,4 +9,5 @@ acc +1
 jmp -4
 acc +6
 
+--output--
 5

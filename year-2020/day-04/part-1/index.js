@@ -3,7 +3,7 @@ const PASSEPORT_KEYS = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid']
 const contestResponse = input => {
 	const passeports = input
 		.join(' ')
-		.split(';')
+		.split('  ')
 		.map(s => s.trim())
 		.map(s => s
 			.split(' ')

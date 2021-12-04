@@ -1,5 +1,5 @@
 const parseInput = input => {
-	const index = input.findIndex(line => line === ';')
+	const index = input.findIndex(line => line === '')
 
 	return {
 		deck1: input.slice(1, index).map(Number),

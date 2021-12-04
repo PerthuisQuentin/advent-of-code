@@ -1,3 +1,4 @@
+--input--
 acc +15
 acc +2
 acc -14
@@ -633,4 +634,5 @@ nop -560
 acc +44
 jmp +1
 
+--output--
 1749
