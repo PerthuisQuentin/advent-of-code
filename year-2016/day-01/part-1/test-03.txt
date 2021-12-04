@@ -1,3 +1,5 @@
+--input--
 R5, L5, R5, R3
 
+--output--
 12

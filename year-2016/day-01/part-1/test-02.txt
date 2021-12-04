@@ -1,3 +1,5 @@
+--input--
 R2, R2, R2
 
+--output--
 2

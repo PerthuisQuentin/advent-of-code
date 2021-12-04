@@ -1,6 +1,8 @@
+--input--
 ULL
 RRDDD
 LURDL
 UUUUD
 
+--output--
 1985

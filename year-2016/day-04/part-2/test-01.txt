@@ -1,5 +1,7 @@
+--input--
 qzmt-zixmtkozy-ivhz-343[qsdfd]
 northpole-object-storage-0[sqdfs]
 sdfd-dsfqd-dqf-245[fdsff]
 
+--output--
 0

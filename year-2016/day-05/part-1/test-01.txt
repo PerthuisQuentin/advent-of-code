@@ -1,3 +1,5 @@
+--input--
 abc
 
+--output--
 18f47a30
