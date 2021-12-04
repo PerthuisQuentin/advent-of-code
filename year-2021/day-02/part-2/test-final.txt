@@ -1,3 +1,4 @@
+--input--
 forward 9
 forward 7
 down 7
@@ -999,4 +1000,5 @@ forward 1
 up 7
 forward 2
 
+--output--
 1971232560
