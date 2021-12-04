@@ -1,3 +1,4 @@
+--input--
 5
 60
 Step P must be finished before step Z can begin.
@@ -102,4 +103,5 @@ Step P must be finished before step W can begin.
 Step K must be finished before step I can begin.
 Step J must be finished before step G can begin.
 
+--output--
 952

@@ -1,3 +1,4 @@
+--input--
 abcdef
 bababc
 abbcde
@@ -6,4 +7,5 @@ aabcdd
 abcdee
 ababab
 
+--output--
 12

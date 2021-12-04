@@ -1,3 +1,4 @@
+--input--
 position=< 10253, -50152> velocity=<-1,  5>
 position=< 20314,  40332> velocity=<-2, -4>
 position=<-19881, -30049> velocity=< 2,  3>
@@ -346,4 +347,5 @@ position=<-39970,  20218> velocity=< 4, -2>
 position=< 40465,  50383> velocity=<-4, -5>
 position=<-29940,  40327> velocity=< 3, -4>
 
+--output--
 10054

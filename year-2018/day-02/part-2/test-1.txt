@@ -1,3 +1,4 @@
+--input--
 abcde
 fghij
 klmno
@@ -6,4 +7,5 @@ fguij
 axcye
 wvxyz
 
+--output--
 fgij
