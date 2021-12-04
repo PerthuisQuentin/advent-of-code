@@ -1,3 +1,4 @@
+--input--
 COM)B
 B)C
 C)D
@@ -12,4 +13,5 @@ K)L
 K)YOU
 I)SAN
 
+--output--
 4

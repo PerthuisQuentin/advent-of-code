@@ -1,3 +1,4 @@
+--input--
 COM)B
 B)C
 C)D
@@ -10,4 +11,5 @@ E)J
 J)K
 K)L
 
+--output--
 42
