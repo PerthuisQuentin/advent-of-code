@@ -48,7 +48,6 @@ something`
 
 const createTestFinalContent = input => `--input--
 ${input}
-
 --output--
 something`
 
