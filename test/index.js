@@ -58,12 +58,15 @@ const loopOnTests = path => {
 		const testContent = Fs.readFileSync(testPath, { encoding: 'utf-8' })
 
 		const rows = testContent.split('\n')
-		const separationIndex = rows.indexOf('')
-		const input = rows.slice(0, separationIndex)
-		const output = rows.slice(separationIndex + 1)
+
+		const inputIndex = rows.indexOf('--input--')
+		const outputIndex = rows.indexOf('--output--')
+
+		const input = rows.slice(inputIndex + 1, outputIndex - 1)
+		const output = rows[outputIndex + 1]
 
 		it(`${display(testSettings.text, testNumber)} : Should return ${output}`, () => {
-			output.should.containEql(partCode(input).toString())
+			output.should.equal(partCode(input).toString())
 		})
 	})
 }
