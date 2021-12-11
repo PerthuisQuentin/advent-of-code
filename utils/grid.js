@@ -184,6 +184,28 @@ class Grid {
 		}
 	}
 
+	some(callback) {
+		for (let x in this.grid) {
+			for (let y in this.grid[x]) {
+				if (callback(this.grid[x][y], { x: Number(x), y: Number(y) })) {
+					return true
+				}
+			}
+		}
+		return false
+	}
+
+	every(callback) {
+		for (let x in this.grid) {
+			for (let y in this.grid[x]) {
+				if (!callback(this.grid[x][y], { x: Number(x), y: Number(y) })) {
+					return false
+				}
+			}
+		}
+		return true
+	}
+
 	getAllPositionOf(value) {
 		let result = []
 		for (let x in this.grid) {
