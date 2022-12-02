@@ -1,0 +1,7 @@
+--input--
+A Y
+B X
+C Z
+
+--output--
+15
