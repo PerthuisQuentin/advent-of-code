@@ -1,6 +1,6 @@
 class ArrayUtils {
 	static sum(array) {
-		return array.reduce((a, b) => a + b)
+		return array.reduce((a, b) => a + b, 0)
 	}
 
 	static stackBy(array, amount) {
