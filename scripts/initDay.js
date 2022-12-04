@@ -51,6 +51,17 @@ ${input}
 --output--
 something`
 
+const createFiles = testFinalContent => {
+	return Promise.resolve()
+		.then(writeResults(part1Path, 'index.js', indesJsContent))
+		.then(writeResults(part1Path, 'test-01.txt', test1Content))
+		.then(writeResults(part1Path, 'test-final.txt', testFinalContent))
+		.then(writeResults(part2Path, 'index.js', indesJsContent))
+		.then(writeResults(part2Path, 'test-01.txt', test1Content))
+		.then(writeResults(part2Path, 'test-final.txt', testFinalContent))
+		.then(() => console.log('Done !'))
+}
+
 Axios.get(`https://adventofcode.com/${argv.year}/day/${argv.day}/input`, {
 	headers: {
 		cookie: `session=${process.env.AOC_SESSION_COOKIE}`
@@ -59,14 +70,9 @@ Axios.get(`https://adventofcode.com/${argv.year}/day/${argv.day}/input`, {
 	.then(response => {
 		const input = response.data
 		const testFinalContent = createTestFinalContent(input)
-
-		return Promise.resolve()
-			.then(writeResults(part1Path, 'index.js', indesJsContent))
-			.then(writeResults(part1Path, 'test-01.txt', test1Content))
-			.then(writeResults(part1Path, 'test-final.txt', testFinalContent))
-			.then(writeResults(part2Path, 'index.js', indesJsContent))
-			.then(writeResults(part2Path, 'test-01.txt', test1Content))
-			.then(writeResults(part2Path, 'test-final.txt', testFinalContent))
-			.then(() => console.log('Done !'))
+		createFiles(testFinalContent)
 	})
-	.catch(console.error)
+	.catch(error => {
+		createFiles(createTestFinalContent('input'))
+		console.error(error)
+	})
