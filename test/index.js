@@ -66,7 +66,7 @@ const loopOnTests = path => {
 		const output = rows[outputIndex + 1]
 
 		it(`${display(testSettings.text, testNumber)} : Should return ${output}`, () => {
-			output.should.equal(partCode(input).toString())
+			partCode(input).toString().should.equal(output)
 		})
 	})
 }
