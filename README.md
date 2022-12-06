@@ -20,6 +20,8 @@ Codes for the previous Advent of code editions
 
 - [2021 Edition](year-2021/)
 
+- [2022 Edition](year-2022/)
+
 # How to use
 
 ## Install
