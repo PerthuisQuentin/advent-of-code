@@ -1,0 +1,5 @@
+--input--
+nppdvjthqldpwncqszvftbrmjlhg
+
+--output--
+6
