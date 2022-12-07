@@ -3,6 +3,14 @@ class ArrayUtils {
 		return array.reduce((a, b) => a + b, 0)
 	}
 
+	static min(array) {
+		return array.reduce((result, current) => current < result ? current : result)
+	}
+
+	static max(array) {
+		return array.reduce((result, current) => current > result ? current : result)
+	}
+
 	static stackBy(array, amount) {
 		return array.reduce((result, current, index) => {
 			if (index % amount === 0) {
