@@ -1,7 +1,6 @@
 const Fs = require('fs')
 const Path = require('path')
 const Assert = require('assert')
-const Should = require('should')
 const argv = require('yargs').argv
 
 const initialPath = './'
@@ -49,6 +48,11 @@ const loopOnFolders = (settings, callback) => path => {
 	})
 }
 
+const prettifyOutput = output => {
+	if (!Array.isArray(output)) return output
+	return `\n${output.join('\n')}\n`
+}
+
 const loopOnTests = path => {
 	const partCode = require(Path.join('../', path, 'index.js'))
 
@@ -63,10 +67,12 @@ const loopOnTests = path => {
 		const outputIndex = rows.indexOf('--output--')
 
 		const input = rows.slice(inputIndex + 1, outputIndex - 1)
-		const output = rows[outputIndex + 1]
+		const rawOutput = rows.slice(outputIndex + 1)
 
-		it(`${display(testSettings.text, testNumber)} : Should return ${output}`, () => {
-			partCode(input).toString().should.equal(output)
+		const output = rawOutput.length === 1 ? rawOutput[0] : rawOutput
+
+		it(`${display(testSettings.text, testNumber)} : Should return ${prettifyOutput(output)}`, () => {
+			Assert.deepEqual(partCode(input), output)
 		})
 	})
 }

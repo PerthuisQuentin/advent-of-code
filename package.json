@@ -20,11 +20,10 @@
 		"url": "https://github.com/PerthuisQuentin/advent-of-code/issues"
 	},
 	"dependencies": {
-		"axios": "^0.24.0",
-		"chalk": "^4.1.0",
-		"dotenv": "^10.0.0",
-		"mocha": "^8.1.3",
-		"should": "^13.2.3",
-		"yargs": "^16.1.1"
+		"axios": "^1.2.1",
+		"chalk": "^5.2.0",
+		"dotenv": "^16.0.3",
+		"mocha": "^10.1.0",
+		"yargs": "^17.6.2"
 	}
 }
