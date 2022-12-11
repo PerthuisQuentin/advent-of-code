@@ -21,6 +21,17 @@ class ArrayUtils {
 			return result
 		}, [])
 	}
+
+	static split(array, separator) {
+		return array.reduce((result, current) => {
+			if (current === separator) {
+				result.push([])
+			} else {
+				result[result.length - 1].push(current)
+			}
+			return result
+		}, [[]])
+	}
 }
 
 module.exports = ArrayUtils
