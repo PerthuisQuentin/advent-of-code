@@ -6,17 +6,17 @@ const argv = require('yargs').argv
 const initialPath = './'
 
 const yearSettings = {
-	regex: /year-[0-9]+/,
+	regex: /year-\d+/,
 	option: 'year',
 	text: 'Year'
 }
 const daySettings = {
-	regex: /day-[0-9]+/,
+	regex: /day-\d+/,
 	option: 'day',
 	text: 'Day'
 }
 const partSettings = {
-	regex: /part-[0-9]+/,
+	regex: /part-\d+/,
 	option: 'part',
 	text: 'Part'
 }
