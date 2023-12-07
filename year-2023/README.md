@@ -8,7 +8,7 @@ Day | Parts
 #4  | [Part 1](day-04/part-1/index.js) - [Part 2](day-04/part-2/index.js)
 #5  | [Part 1](day-05/part-1/index.js) - Soon™
 #6  | [Part 1](day-06/part-1/index.js) - [Part 2](day-06/part-2/index.js)
-#7  | Soon™                            - Soon™
+#7  | [Part 1](day-07/part-1/index.js) - [Part 2](day-07/part-2/index.js)
 #8  | Soon™                            - Soon™
 #9  | Soon™                            - Soon™
 #10 | Soon™                            - Soon™
