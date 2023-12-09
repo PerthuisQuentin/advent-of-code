@@ -14,15 +14,15 @@ class Range {
 		return `${range.start}-${range.end}-${range.startInclusive}-${range.endInclusive}`
 	}
 
+	static asInclusive(range) {
+		const start = range.startInclusive ? range.start : range.start + 1
+		const end = range.endInclusive ? range.end : range.end - 1
+		return new Range(start, end, true, true)
+	}
+
 	has(value) {
-		if (this.startInclusive && this.endInclusive)
-			return this.start <= value && value <= this.end
-		else if (this.startInclusive && !this.endInclusive)
-			return this.start <= value && value < this.end
-		else if (!this.startInclusive && this.endInclusive)
-			return this.start < value && value <= this.end
-		else
-			return this.start < value && value < this.end
+		const range = Range.asInclusive(this)
+		return range.start <= value && value <= range.end
 	}
 
 	isSame(range) {
@@ -35,25 +35,15 @@ class Range {
 	}
 
 	intersects(range) {
-		if (this.startInclusive && this.endInclusive)
-			return this.end >= range.start && range.end >= this.start
-		else if (this.startInclusive && !this.endInclusive)
-			return this.end >= range.start && range.end > this.start
-		else if (!this.startInclusive && this.endInclusive)
-			return this.end > range.start && range.end >= this.start
-		else
-			return this.end > range.start && range.end > this.start
+		const rangeA = Range.asInclusive(this)
+		const rangeB = Range.asInclusive(range)
+		return rangeA.end >= rangeB.start && rangeB.end >= rangeA.start
 	}
 
 	contains(range) {
-		if (this.startInclusive && this.endInclusive)
-			return this.start <= range.start && range.end <= this.end
-		else if (this.startInclusive && !this.endInclusive)
-			return this.start <= range.start && range.end < this.end
-		else if (!this.startInclusive && this.endInclusive)
-			return this.start < range.start && range.end <= this.end
-		else
-			return this.start < range.start && range.end < this.end
+		const rangeA = Range.asInclusive(this)
+		const rangeB = Range.asInclusive(range)
+		return rangeA.start <= rangeB.start && rangeB.end <= rangeA.end
 	}
 
 	toString() {
