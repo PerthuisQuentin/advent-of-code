@@ -52,6 +52,14 @@ class Grid {
 		return this.grid[x]
 	}
 
+	getColumn(y) {
+		const column = {}
+		for (let x in this.grid) {
+			column[x] = this.grid[x][y]
+		}
+		return column
+	}
+
 	initRow(x) {
 		this.grid[x] = {}
 	}
