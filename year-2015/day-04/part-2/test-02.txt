@@ -1,5 +1,0 @@
---input--
-pqrstuv
-
---output--
-5714438

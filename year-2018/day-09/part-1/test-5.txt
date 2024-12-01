@@ -1,5 +1,0 @@
---input--
-21 players; last marble is worth 6111 points
-
---output--
-54718

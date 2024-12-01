@@ -1,5 +1,0 @@
---input--
-abcdef
-
---output--
-6742839

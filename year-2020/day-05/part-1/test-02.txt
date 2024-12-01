@@ -1,5 +1,0 @@
---input--
-BFFFBBFRRR
-
---output--
-567

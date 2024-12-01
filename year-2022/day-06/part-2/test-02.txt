@@ -1,5 +1,0 @@
---input--
-bvwbjplbgvbhsrlpgdmjqwftvncz
-
---output--
-23

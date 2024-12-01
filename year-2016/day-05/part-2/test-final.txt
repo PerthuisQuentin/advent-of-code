@@ -1,5 +1,0 @@
---input--
-ojvtpuvg
-
---output--
-1050cbbd

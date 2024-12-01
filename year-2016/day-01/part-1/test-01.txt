@@ -1,5 +1,0 @@
---input--
-R2, L3
-
---output--
-5

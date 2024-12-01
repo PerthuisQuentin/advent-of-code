@@ -1,5 +1,0 @@
---input--
-abc
-
---output--
-05ace8e3

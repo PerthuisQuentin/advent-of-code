@@ -6,21 +6,9 @@
 
 Codes for the previous Advent of code editions
 
-- [2015 Edition](year-2015/)
+- [2024 Edition](src/year-2024/)
 
-- [2016 Edition](year-2016/)
-
-- [2017 Edition](year-2017/)
-
-- [2018 Edition](year-2018/)
-
-- [2019 Edition](year-2019/)
-
-- [2020 Edition](year-2020/)
-
-- [2021 Edition](year-2021/)
-
-- [2022 Edition](year-2022/)
+Or olds editions in javascript, look at [old-js-branch](https://github.com/PerthuisQuentin/advent-of-code/tree/old-js-branch)
 
 # How to use
 

@@ -1,8 +1,0 @@
---input--
-ULL
-RRDDD
-LURDL
-UUUUD
-
---output--
-5DB3

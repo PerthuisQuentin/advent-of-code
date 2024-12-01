@@ -1,5 +1,0 @@
---input--
-BBFFBBFRLL
-
---output--
-820

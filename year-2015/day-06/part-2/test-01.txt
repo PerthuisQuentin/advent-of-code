@@ -1,6 +1,0 @@
---input--
-turn on 0,0 through 9,9
-turn on 0,0 through 9,9
-
---output--
-200

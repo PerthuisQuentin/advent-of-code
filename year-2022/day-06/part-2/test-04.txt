@@ -1,5 +1,0 @@
---input--
-nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg
-
---output--
-29

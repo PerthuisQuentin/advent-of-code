@@ -1,5 +1,0 @@
---input--
-mjqjpqmgbljsphdztnvjfqwrcgsmlb
-
---output--
-7
