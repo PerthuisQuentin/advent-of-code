@@ -19,33 +19,21 @@ git clone https://github.com/PerthuisQuentin/battle-dev.git
 npm install
 ```
 
+Duplicate the `example.env` file and rename it to `.env`
+
+Then recover your session cookie from the advent of code website and paste it in the `.env` file
+
+(You can find the session cookie in the browser network console by going on your input page for example)
+
+
 ## Run tests
 
 ```
-npm test
+npm run test:watch
 ```
 
-Options
+Then filter on the test you want to run with jest cli
 
-```
---year <string>
-	Use a string as filter on years
-
---day <string>
-	Use a string as filter on days
-
---part <string>
-	Use a string as filter on parts
-
---test <string>
-	Use a string as filter on tests
-```
-
-Example
-
-```
-npm test -- --year 2019 --day 05 --part 2 --test 01
-```
 
 ## Init day files
 
@@ -53,37 +41,8 @@ npm test -- --year 2019 --day 05 --part 2 --test 01
 npm run initDay
 ```
 
-Options
-
-```
---year <string>
-	year number (2015, 2016, etc...)
-
---day <string>
-	day number (1, 2, 3, etc...)
-```
-
-Example
-
-```
-npm run initDay -- --year 2019 --day 5
-```
-
 ## Update day list
 
 ```
 npm run updateDaysList
-```
-
-Options
-
-```
---year <string>
-	year number (2015, 2016, etc...)
-```
-
-Example
-
-```
-npm run updateDaysList -- --year 2019
 ```
