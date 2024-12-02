@@ -15,7 +15,7 @@ Or olds editions in javascript, look at [old-js-branch](https://github.com/Perth
 ## Install
 
 ```
-git clone https://github.com/PerthuisQuentin/battle-dev.git
+git clone https://github.com/PerthuisQuentin/advent-of-code.git
 npm install
 ```
 
