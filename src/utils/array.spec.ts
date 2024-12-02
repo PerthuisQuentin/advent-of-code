@@ -1,4 +1,4 @@
-import { max, min, sum } from './array'
+import { count, max, min, sum } from './array'
 
 describe('Array', () => {
   describe('Sum', () => {
@@ -40,6 +40,24 @@ describe('Array', () => {
 
     it('Should throw an error when the list is empty.', () => {
       expect(() => max([])).toThrow('Empty list')
+    })
+  })
+
+  describe('Count', () => {
+    it('Should return the count of elements greater than 3', () => {
+      expect(count([1, 2, 3, 4, 5], (x) => x > 3)).toBe(2)
+    })
+
+    it('Should return the count of strings with length greater than 2', () => {
+      expect(count(['aa', 'bbb', 'cccc', 'ddddddd', 'ee'], (x) => x.length > 2)).toBe(3)
+    })
+
+    it('Should return the length of the list if all elements match the predicate', () => {
+      expect(count([1, 2, 3, 4, 5], (x) => x > 0)).toBe(5)
+    })
+
+    it('Should return 0 for an empty list', () => {
+      expect(count([], (x) => x > 0)).toBe(0)
     })
   })
 })

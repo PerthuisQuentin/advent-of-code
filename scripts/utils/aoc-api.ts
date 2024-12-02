@@ -11,7 +11,7 @@ const client = Axios.create({
 
 export const getDayInput = async (year: string, day: string): Promise<string> => {
   const response = await client.get(`/${year}/day/${day}/input`)
-  return response.data
+  return response.data.trim()
 }
 
 export const submitAnswer = async (

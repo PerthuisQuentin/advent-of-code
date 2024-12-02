@@ -19,6 +19,7 @@ const run = async (): Promise<void> => {
   // Get input and create test-final file content
   const testFileContent = Fs.readFileSync(filesPaths.testFilePath, 'utf-8')
   const input = await getDayInput(year, day)
+
   const testFinalContent = Fs.readFileSync(filesPaths.testFinalFilePath, 'utf-8').replace(
     '${data}',
     input,
