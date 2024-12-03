@@ -22,11 +22,11 @@ const run = async (): Promise<void> => {
     let line = `#${day.toString().padEnd(2, ' ')} | `
 
     line += Fs.existsSync(paths.code1Path)
-      ? `[Part 1](.${paths.code1Path.replace(paths.dayPath, '')})`
+      ? `[Part 1](.${paths.code1Path.replace(paths.yearPath, '')})`
       : 'Soon™                           '
     line += ' - '
     line += Fs.existsSync(paths.code2Path)
-      ? `[Part 2](.${paths.code2Path.replace(paths.dayPath, '')})`
+      ? `[Part 2](.${paths.code2Path.replace(paths.yearPath, '')})`
       : 'Soon™'
 
     days.push(line)
