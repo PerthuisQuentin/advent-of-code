@@ -5,8 +5,10 @@ describe('Point2D', () => {
     it('should create a point with given x and y values', () => {
       const point = new Point2D({ x: 1, y: 2 })
 
-      expect(point.x).toBe(1)
-      expect(point.y).toBe(2)
+      expect(point).toEqual({
+        x: 1,
+        y: 2,
+      })
     })
   })
 
@@ -16,8 +18,7 @@ describe('Point2D', () => {
       const clone = point.clone()
 
       expect(clone).not.toBe(point)
-      expect(clone.x).toBe(1)
-      expect(clone.y).toBe(2)
+      expect(clone).toEqual(point)
     })
   })
 
@@ -27,8 +28,10 @@ describe('Point2D', () => {
       const point2 = new Point2D({ x: 3, y: 4 })
       const result = point1.add(point2)
 
-      expect(result.x).toBe(4)
-      expect(result.y).toBe(6)
+      expect(result).toEqual({
+        x: 4,
+        y: 6,
+      })
     })
   })
 
@@ -37,8 +40,10 @@ describe('Point2D', () => {
       const point = new Point2D({ x: 1, y: 2 })
       const result = point.multiply(3)
 
-      expect(result.x).toBe(3)
-      expect(result.y).toBe(6)
+      expect(result).toEqual({
+        x: 3,
+        y: 6,
+      })
     })
   })
 })
