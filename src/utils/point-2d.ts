@@ -19,6 +19,10 @@ export class Point2D {
     return new Point2D({ x: this.x + point.x, y: this.y + point.y })
   }
 
+  public subtract(point: Point2D): Point2D {
+    return new Point2D({ x: this.x - point.x, y: this.y - point.y })
+  }
+
   public multiply(factor: number): Point2D {
     return new Point2D({ x: this.x * factor, y: this.y * factor })
   }

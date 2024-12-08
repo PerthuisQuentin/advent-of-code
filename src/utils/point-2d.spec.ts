@@ -43,6 +43,19 @@ describe('Point2D', () => {
     })
   })
 
+  describe('subtract', () => {
+    it('should subtract two points', () => {
+      const point1 = new Point2D({ x: 1, y: 2 })
+      const point2 = new Point2D({ x: 3, y: 4 })
+      const result = point1.subtract(point2)
+
+      expect(result).toEqual({
+        x: -2,
+        y: -2,
+      })
+    })
+  })
+
   describe('multiply', () => {
     it('should multiply a point by a factor', () => {
       const point = new Point2D({ x: 1, y: 2 })
