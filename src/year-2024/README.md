@@ -7,9 +7,9 @@ Day | Parts
 #3  | [Part 1](./day-03/part-1/2024-03-1.ts) - [Part 2](./day-03/part-2/2024-03-2.ts)
 #4  | [Part 1](./day-04/part-1/2024-04-1.ts) - [Part 2](./day-04/part-2/2024-04-2.ts)
 #5  | [Part 1](./day-05/part-1/2024-05-1.ts) - [Part 2](./day-05/part-2/2024-05-2.ts)
-#6  | Soon™                            - Soon™
-#7  | Soon™                            - Soon™
-#8  | Soon™                            - Soon™
+#6  | [Part 1](./day-06/part-1/2024-06-1.ts) - [Part 2](./day-06/part-2/2024-06-2.ts)
+#7  | [Part 1](./day-07/part-1/2024-07-1.ts) - [Part 2](./day-07/part-2/2024-07-2.ts)
+#8  | [Part 1](./day-08/part-1/2024-08-1.ts) - [Part 2](./day-08/part-2/2024-08-2.ts)
 #9  | Soon™                            - Soon™
 #10 | Soon™                            - Soon™
 #11 | Soon™                            - Soon™
