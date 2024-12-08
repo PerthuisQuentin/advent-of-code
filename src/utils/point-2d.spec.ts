@@ -22,6 +22,14 @@ describe('Point2D', () => {
     })
   })
 
+  describe('hash', () => {
+    it('should return a string with x and y values separated by a slash', () => {
+      const point = new Point2D({ x: 3, y: -8 })
+
+      expect(point.hash).toBe('3/-8')
+    })
+  })
+
   describe('add', () => {
     it('should add two points', () => {
       const point1 = new Point2D({ x: 1, y: 2 })
@@ -43,6 +51,41 @@ describe('Point2D', () => {
       expect(result).toEqual({
         x: 3,
         y: 6,
+      })
+    })
+  })
+
+  describe('getMirroredPoint', () => {
+    it('should return the mirrored point across the given mirror point', () => {
+      const point = new Point2D({ x: 1, y: 2 })
+      const mirrorPoint = new Point2D({ x: 3, y: 4 })
+      const result = point.getMirroredPoint(mirrorPoint)
+
+      expect(result).toEqual({
+        x: 5,
+        y: 6,
+      })
+    })
+
+    it('should return the same point if the point is the same as the mirror point', () => {
+      const point = new Point2D({ x: 3, y: 4 })
+      const mirrorPoint = new Point2D({ x: 3, y: 4 })
+      const result = point.getMirroredPoint(mirrorPoint)
+
+      expect(result).toEqual({
+        x: 3,
+        y: 4,
+      })
+    })
+
+    it('should return the mirrored point across the given mirror point with negative values', () => {
+      const point = new Point2D({ x: -1, y: -2 })
+      const mirrorPoint = new Point2D({ x: -3, y: -4 })
+      const result = point.getMirroredPoint(mirrorPoint)
+
+      expect(result).toEqual({
+        x: -5,
+        y: -6,
       })
     })
   })

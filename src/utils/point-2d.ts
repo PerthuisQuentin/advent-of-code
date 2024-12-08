@@ -7,6 +7,10 @@ export class Point2D {
     this.y = y
   }
 
+  get hash(): string {
+    return `${this.x}/${this.y}`
+  }
+
   public clone(): Point2D {
     return new Point2D({ x: this.x, y: this.y })
   }
@@ -17,5 +21,12 @@ export class Point2D {
 
   public multiply(factor: number): Point2D {
     return new Point2D({ x: this.x * factor, y: this.y * factor })
+  }
+
+  public getMirroredPoint(mirrorPoint: Point2D): Point2D {
+    return new Point2D({
+      x: mirrorPoint.x - (this.x - mirrorPoint.x),
+      y: mirrorPoint.y - (this.y - mirrorPoint.y),
+    })
   }
 }
