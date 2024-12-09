@@ -10,7 +10,7 @@ Day | Parts
 #6  | [Part 1](./day-06/part-1/2024-06-1.ts) - [Part 2](./day-06/part-2/2024-06-2.ts)
 #7  | [Part 1](./day-07/part-1/2024-07-1.ts) - [Part 2](./day-07/part-2/2024-07-2.ts)
 #8  | [Part 1](./day-08/part-1/2024-08-1.ts) - [Part 2](./day-08/part-2/2024-08-2.ts)
-#9  | Soon™                            - Soon™
+#9  | [Part 1](./day-09/part-1/2024-09-1.ts) - [Part 2](./day-09/part-2/2024-09-2.ts)
 #10 | Soon™                            - Soon™
 #11 | Soon™                            - Soon™
 #12 | Soon™                            - Soon™
