@@ -7,6 +7,7 @@ const client = Axios.create({
   headers: {
     cookie: `session=${process.env.AOC_SESSION_COOKIE}`,
   },
+  transformResponse: (data) => data,
 })
 
 export const getDayInput = async (year: string, day: string): Promise<string> => {
