@@ -1,7 +1,7 @@
 import inquirer from 'inquirer'
 
 const YEAR_REGEX = /^\d{4}$/
-const DAY_REGEX = /^(0?[1-9]|[12][/d]|3[01])$/
+const DAY_REGEX = /^(0?[1-9]|[12][0-9]|3[01])$/
 
 const yearQuestion: Parameters<typeof inquirer.prompt>[0] = {
   type: 'input',
