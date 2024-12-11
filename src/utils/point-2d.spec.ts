@@ -102,4 +102,30 @@ describe('Point2D', () => {
       })
     })
   })
+
+  describe('getNeighbors', () => {
+    it('should return the four neighboring points', () => {
+      const point = new Point2D({ x: 2, y: 3 })
+      const neighbors = point.getNeighbors()
+
+      expect(neighbors).toEqual([
+        new Point2D({ x: 1, y: 3 }),
+        new Point2D({ x: 2, y: 2 }),
+        new Point2D({ x: 3, y: 3 }),
+        new Point2D({ x: 2, y: 4 }),
+      ])
+    })
+
+    it('should return the correct neighbors for a point at the origin', () => {
+      const point = new Point2D({ x: 0, y: 0 })
+      const neighbors = point.getNeighbors()
+
+      expect(neighbors).toEqual([
+        new Point2D({ x: -1, y: 0 }),
+        new Point2D({ x: 0, y: -1 }),
+        new Point2D({ x: 1, y: 0 }),
+        new Point2D({ x: 0, y: 1 }),
+      ])
+    })
+  })
 })

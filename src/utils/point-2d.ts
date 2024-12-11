@@ -33,4 +33,13 @@ export class Point2D {
       y: mirrorPoint.y - (this.y - mirrorPoint.y),
     })
   }
+
+  public getNeighbors(): Point2D[] {
+    return [
+      new Point2D({ x: this.x - 1, y: this.y }),
+      new Point2D({ x: this.x, y: this.y - 1 }),
+      new Point2D({ x: this.x + 1, y: this.y }),
+      new Point2D({ x: this.x, y: this.y + 1 }),
+    ]
+  }
 }

@@ -194,4 +194,39 @@ describe('FixedGrid2D', () => {
       ])
     })
   })
+
+  describe('getNeighbors', () => {
+    it('Should return the neighbors of a cell in the grid', () => {
+      const grid = new FixedGrid2D([
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ])
+
+      expect(grid.getNeighbors(new Point2D({ x: 1, y: 1 }))).toEqual([
+        new Cell2D({ x: 0, y: 1, value: 4 }),
+        new Cell2D({ x: 1, y: 0, value: 8 }),
+        new Cell2D({ x: 2, y: 1, value: 6 }),
+        new Cell2D({ x: 1, y: 2, value: 2 }),
+      ])
+    })
+
+    it('Should return the partial neighbors of a cell in the grid', () => {
+      const grid = new FixedGrid2D([
+        [1, 2],
+        [4, 5],
+      ])
+
+      expect(grid.getNeighbors(new Point2D({ x: 0, y: 0 }))).toEqual([
+        new Cell2D({ x: 1, y: 0, value: 5 }),
+        new Cell2D({ x: 0, y: 1, value: 1 }),
+      ])
+    })
+
+    it('Should return an empty array if the cell has no neighbors', () => {
+      const grid = new FixedGrid2D([[1]])
+
+      expect(grid.getNeighbors(new Point2D({ x: 0, y: 0 }))).toEqual([])
+    })
+  })
 })

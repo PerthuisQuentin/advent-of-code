@@ -9,6 +9,10 @@ export class Cell2D<T> extends Point2D {
     this._value = value
   }
 
+  get point(): Point2D {
+    return new Point2D({ x: this.x, y: this.y })
+  }
+
   get value(): T {
     return this._value
   }
@@ -58,6 +62,13 @@ export class FixedGrid2D<T> {
 
     this.getRow(cell.x)!.set(cell.y, cell)
     this.updateBounds(cell)
+  }
+
+  getNeighbors(point: Point2D): Cell2D<T>[] {
+    return point
+      .getNeighbors()
+      .map((position) => this.getCell(position))
+      .filter((cell) => cell !== undefined)
   }
 
   private loadArray(array: T[][]): void {
