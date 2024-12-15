@@ -42,6 +42,44 @@ describe('FixedGrid2D', () => {
         ]),
       })
     })
+
+    it('should create a FixedGrid2d with a given size', () => {
+      const grid = new FixedGrid2D(new Point2D({ x: 3, y: 4 }), '.')
+
+      expect(grid).toEqual({
+        bounds: new Rectangle2D({ minX: 0, minY: 0, maxX: 2, maxY: 3 }),
+        fixedBounds: true,
+        grid: new Map([
+          [
+            0,
+            new Map([
+              [0, new Cell2D({ x: 0, y: 0, value: '.' })],
+              [1, new Cell2D({ x: 0, y: 1, value: '.' })],
+              [2, new Cell2D({ x: 0, y: 2, value: '.' })],
+              [3, new Cell2D({ x: 0, y: 3, value: '.' })],
+            ]),
+          ],
+          [
+            1,
+            new Map([
+              [0, new Cell2D({ x: 1, y: 0, value: '.' })],
+              [1, new Cell2D({ x: 1, y: 1, value: '.' })],
+              [2, new Cell2D({ x: 1, y: 2, value: '.' })],
+              [3, new Cell2D({ x: 1, y: 3, value: '.' })],
+            ]),
+          ],
+          [
+            2,
+            new Map([
+              [0, new Cell2D({ x: 2, y: 0, value: '.' })],
+              [1, new Cell2D({ x: 2, y: 1, value: '.' })],
+              [2, new Cell2D({ x: 2, y: 2, value: '.' })],
+              [3, new Cell2D({ x: 2, y: 3, value: '.' })],
+            ]),
+          ],
+        ]),
+      })
+    })
   })
 
   describe('isOutsideBounds', () => {
@@ -176,6 +214,16 @@ describe('FixedGrid2D', () => {
       ])
 
       expect(grid.toString()).toBe('123\n456\n789')
+    })
+
+    it('Should return the grid as a string with a transformation', () => {
+      const grid = new FixedGrid2D([
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ])
+
+      expect(grid.toString((x: number) => (x * 2).toString())).toBe('246\n81012\n141618')
     })
   })
 

@@ -27,8 +27,29 @@ export class FixedGrid2D<T> {
   private bounds: Rectangle2D
   private fixedBounds: boolean
 
-  constructor(arayGrid: T[][]) {
-    this.loadArray(arayGrid)
+  constructor(sizeOrArrayGrid: Point2D | T[][], defaultValue?: T) {
+    if (Array.isArray(sizeOrArrayGrid)) {
+      this.loadArray(sizeOrArrayGrid)
+    } else {
+      if (defaultValue === undefined) throw new Error('Default value is required')
+      this.loadSize(sizeOrArrayGrid, defaultValue)
+    }
+  }
+
+  get minX(): number {
+    return this.bounds.minX
+  }
+
+  get maxX(): number {
+    return this.bounds.maxX
+  }
+
+  get minY(): number {
+    return this.bounds.minY
+  }
+
+  get maxY(): number {
+    return this.bounds.maxY
   }
 
   public isOutsideBounds(point: Point2D): boolean {
@@ -85,6 +106,20 @@ export class FixedGrid2D<T> {
     this.fixedBounds = true
   }
 
+  private loadSize(size: Point2D, defaultValue: T): void {
+    this.grid = new Map()
+    this.bounds = new Rectangle2D({ minX: 0, minY: 0, maxX: 0, maxY: 0 })
+    this.fixedBounds = false
+
+    for (let y = 0; y < size.y; y++) {
+      for (let x = 0; x < size.x; x++) {
+        this.setCell(new Cell2D({ x, y, value: defaultValue }))
+      }
+    }
+
+    this.fixedBounds = true
+  }
+
   public forEach(callback: (cell: Cell2D<T>) => void): void {
     for (let y = this.bounds.maxY; y >= this.bounds.minY; y--) {
       for (let x = this.bounds.minX; x <= this.bounds.maxX; x++) {
@@ -107,9 +142,11 @@ export class FixedGrid2D<T> {
     return grid
   }
 
-  public toString(): string {
+  public toString(transform?: (value: T) => string): string {
     const gridArray = this.toArray()
-    return gridArray.map((row) => row.join('')).join('\n')
+    return gridArray
+      .map((row) => row.map((cell) => (transform ? transform(cell) : cell)).join(''))
+      .join('\n')
   }
 
   public getAllCellsOf(value: T): Cell2D<T>[] {
