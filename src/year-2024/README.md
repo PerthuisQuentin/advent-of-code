@@ -13,10 +13,10 @@ Day | Parts
 #9  | [Part 1](./day-09/part-1/2024-09-1.ts) - [Part 2](./day-09/part-2/2024-09-2.ts)
 #10 | [Part 1](./day-10/part-1/2024-10-1.ts) - [Part 2](./day-10/part-2/2024-10-2.ts)
 #11 | [Part 1](./day-11/part-1/2024-11-1.ts) - [Part 2](./day-11/part-2/2024-11-2.ts)
-#12 | Soon™                            - Soon™
-#13 | Soon™                            - Soon™
-#14 | Soon™                            - Soon™
-#15 | Soon™                            - Soon™
+#12 | [Part 1](./day-12/part-1/2024-12-1.ts) - [Part 2](./day-12/part-2/2024-12-2.ts)
+#13 | [Part 1](./day-13/part-1/2024-13-1.ts) - [Part 2](./day-13/part-2/2024-13-2.ts)
+#14 | [Part 1](./day-14/part-1/2024-14-1.ts) - [Part 2](./day-14/part-2/2024-14-2.ts)
+#15 | [Part 1](./day-15/part-1/2024-15-1.ts) - [Part 2](./day-15/part-2/2024-15-2.ts)
 #16 | Soon™                            - Soon™
 #17 | Soon™                            - Soon™
 #18 | Soon™                            - Soon™
