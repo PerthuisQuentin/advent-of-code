@@ -2,6 +2,7 @@ import Chalk from 'chalk'
 import Path from 'path'
 
 import { Cell2D, FixedGrid2D } from 'src/utils/fixed-grid-2d'
+import { delay } from 'src/utils/promises'
 import { readTestFile } from 'tests/test-files'
 
 import { moveRobots, parseInput, Robot } from '../part-1/2024-14-1'
@@ -25,8 +26,6 @@ const showRobots = (robots: Robot[]): void => {
       .join('\n'),
   )
 }
-
-const delay = (ms: number): Promise<void> => new Promise((resolve) => setTimeout(resolve, ms))
 
 export const run = async (
   startIteration: number,
