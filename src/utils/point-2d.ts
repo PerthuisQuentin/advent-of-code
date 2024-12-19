@@ -15,6 +15,10 @@ export class Point2D {
     return new Point2D({ x: this.x, y: this.y })
   }
 
+  public isSame(point: Point2D): boolean {
+    return this.x === point.x && this.y === point.y
+  }
+
   public add(point: Point2D): Point2D {
     return new Point2D({ x: this.x + point.x, y: this.y + point.y })
   }

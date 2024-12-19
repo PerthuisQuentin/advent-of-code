@@ -22,6 +22,22 @@ describe('Point2D', () => {
     })
   })
 
+  describe('isSame', () => {
+    it('should return true if the points are the same', () => {
+      const point1 = new Point2D({ x: 1, y: 2 })
+      const point2 = new Point2D({ x: 1, y: 2 })
+
+      expect(point1.isSame(point2)).toBe(true)
+    })
+
+    it('should return false if the points are different', () => {
+      const point1 = new Point2D({ x: 1, y: 2 })
+      const point2 = new Point2D({ x: 3, y: 4 })
+
+      expect(point1.isSame(point2)).toBe(false)
+    })
+  })
+
   describe('hash', () => {
     it('should return a string with x and y values separated by a slash', () => {
       const point = new Point2D({ x: 3, y: -8 })
