@@ -36,6 +36,11 @@ export class FixedGrid2D<T> {
     }
   }
 
+  public clone(): FixedGrid2D<T> {
+    const clone = new FixedGrid2D<T>(this.toArray())
+    return clone
+  }
+
   get minX(): number {
     return this.bounds.minX
   }
@@ -118,6 +123,16 @@ export class FixedGrid2D<T> {
     }
 
     this.fixedBounds = true
+  }
+
+  public find(callback: (cell: Cell2D<T>) => boolean): Cell2D<T> | undefined {
+    for (let y = this.bounds.maxY; y >= this.bounds.minY; y--) {
+      for (let x = this.bounds.minX; x <= this.bounds.maxX; x++) {
+        const cell = this.getCell(new Point2D({ x, y }))
+        if (callback(cell!)) return cell
+      }
+    }
+    return undefined
   }
 
   public forEach(callback: (cell: Cell2D<T>) => void): void {

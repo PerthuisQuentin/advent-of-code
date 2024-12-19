@@ -82,6 +82,21 @@ describe('FixedGrid2D', () => {
     })
   })
 
+  describe('clone', () => {
+    it('Should returns a clone of the grid', () => {
+      const grid = new FixedGrid2D([
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ])
+
+      const clone = grid.clone()
+
+      expect(clone).toEqual(grid)
+      expect(clone).not.toBe(grid)
+    })
+  })
+
   describe('isOutsideBounds', () => {
     it('Should return false with a point inside the grid', () => {
       const grid = new FixedGrid2D([
@@ -161,6 +176,34 @@ describe('FixedGrid2D', () => {
       expect(grid.getCell(new Point2D({ x: 1, y: 1 }))).toEqual(
         new Cell2D({ x: 1, y: 1, value: 10 }),
       )
+    })
+  })
+
+  describe('find', () => {
+    it('Should returns the searched cell', () => {
+      const grid = new FixedGrid2D([
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ])
+
+      const callback = (cell: Cell2D<number>): boolean => cell.value === 5
+      grid.forEach(callback)
+
+      expect(grid.find(callback)).toEqual(new Cell2D({ x: 1, y: 1, value: 5 }))
+    })
+
+    it('Should return undefined if the cell is not found', () => {
+      const grid = new FixedGrid2D([
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ])
+
+      const callback = (cell: Cell2D<number>): boolean => cell.value === 10
+      grid.forEach(callback)
+
+      expect(grid.find(callback)).toBeUndefined()
     })
   })
 
