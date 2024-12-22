@@ -1,5 +1,5 @@
 import { Cell2D, FixedGrid2D } from 'src/utils/fixed-grid-2d'
-import { backtrace, breadthFirstSearch } from 'src/utils/pathfinding'
+import { backtrace, exploreByBreadthFirstSearch } from 'src/utils/pathfinding'
 import { Point2D } from 'src/utils/point-2d'
 
 export enum Tile {
@@ -36,7 +36,7 @@ export const getPathWithNthWalls = (
 
   addWallsToGrid(gridCopy, walls.slice(0, wallAmount))
 
-  const parentByHash = breadthFirstSearch(
+  const parentByHash = exploreByBreadthFirstSearch(
     gridCopy,
     (cell) => cell.value === Tile.Empty,
     new Point2D({ x: 0, y: gridCopy.maxY }),
