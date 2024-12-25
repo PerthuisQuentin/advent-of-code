@@ -1,4 +1,4 @@
-import { count, max, min, multiply, split, sum } from './array'
+import { count, max, min, multiply, split, stackBy, sum } from './array'
 
 describe('Array', () => {
   describe('sum', () => {
@@ -105,6 +105,36 @@ describe('Array', () => {
 
     it('Should split srting array', () => {
       expect(split(['hello', '', 'world'], '')).toEqual([['hello'], ['world']])
+    })
+  })
+
+  describe('stackBy', () => {
+    it('Should regroup items by 2', () => {
+      expect(stackBy([1, 2, 3, 4, 5, 6, 7, 8, 9], 2)).toEqual([[1, 2], [3, 4], [5, 6], [7, 8], [9]])
+    })
+
+    it('Should regroup items by 3', () => {
+      expect(stackBy([1, 2, 3, 4, 5, 6, 7, 8, 9], 3)).toEqual([
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ])
+    })
+
+    it('Should return an empty array if the input array is empty', () => {
+      expect(stackBy([], 3)).toEqual([])
+    })
+
+    it('Should return an array of empty array if the amount is greater than the length', () => {
+      expect(stackBy([1, 2, 3], 4)).toEqual([[1, 2, 3]])
+    })
+
+    it('Should return string items regrouped by 2', () => {
+      expect(stackBy(['a', 'b', 'c', 'd', 'e', 'f'], 2)).toEqual([
+        ['a', 'b'],
+        ['c', 'd'],
+        ['e', 'f'],
+      ])
     })
   })
 })

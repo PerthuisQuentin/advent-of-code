@@ -39,3 +39,14 @@ export const split = <T>(array: T[], separator: T): T[][] => {
     [[]] as T[][],
   )
 }
+
+export const stackBy = <T>(array: T[], amount: number): T[][] => {
+  return array.reduce((result, current, index) => {
+    if (index % amount === 0) {
+      result.push([current])
+    } else {
+      result[result.length - 1]!.push(current)
+    }
+    return result
+  }, [] as T[][])
+}
