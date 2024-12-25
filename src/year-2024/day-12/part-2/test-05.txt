@@ -1,0 +1,10 @@
+--input--
+AAAAAA
+AAABBA
+AAABBA
+ABBAAA
+ABBAAA
+AAAAAA
+
+--output--
+368

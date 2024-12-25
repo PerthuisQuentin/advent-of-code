@@ -1,0 +1,9 @@
+--input--
+OOOOO
+OXOXO
+OOOOO
+OXOXO
+OOOOO
+
+--output--
+772

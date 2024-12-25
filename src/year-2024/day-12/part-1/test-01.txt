@@ -1,0 +1,8 @@
+--input--
+AAAA
+BBCD
+BBCC
+EEEC
+
+--output--
+140

@@ -1,0 +1,9 @@
+--input--
+EEEEE
+EXXXX
+EEEEE
+EXXXX
+EEEEE
+
+--output--
+236
