@@ -1,0 +1,5 @@
+--input--
+AxBCDDCAxD
+
+--output--
+28

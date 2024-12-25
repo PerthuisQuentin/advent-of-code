@@ -25,7 +25,9 @@ const run = async (): Promise<void> => {
     for (let part = 1; part <= challenge.partAmount; part++) {
       const { codePath } = challenge.getPartPaths(edition, exercice.toString(), part.toString())
 
-      line += Fs.existsSync(codePath) ? `[Part 1](.${codePath.replace(editionPath, '')})` : 'Soon™'
+      line += Fs.existsSync(codePath)
+        ? `[Part ${part}](.${codePath.replace(editionPath, '')})`
+        : 'Soon™'
       if (part < challenge.partAmount) line += ' - '
     }
 

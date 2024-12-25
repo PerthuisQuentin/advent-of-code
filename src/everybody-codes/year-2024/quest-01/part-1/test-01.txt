@@ -1,0 +1,5 @@
+--input--
+ABBAC
+
+--output--
+5
