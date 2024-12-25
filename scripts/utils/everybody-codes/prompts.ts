@@ -3,7 +3,7 @@ import inquirer from 'inquirer'
 import { EditionAndExerciceResponse, EditionResponse } from '../challenge'
 
 const YEAR_REGEX = /^\d{4}$/
-const DAY_REGEX = /^(0?[1-9]|1\d|2[0-5])$/
+const QUEST_REGEX = /^(0?[1-9]|1\d|20)$/
 
 const yearQuestion: Parameters<typeof inquirer.prompt>[0] = {
   type: 'input',
@@ -16,13 +16,13 @@ const yearQuestion: Parameters<typeof inquirer.prompt>[0] = {
   },
 }
 
-const dayQuestion: Parameters<typeof inquirer.prompt>[0] = {
+const questQuestion: Parameters<typeof inquirer.prompt>[0] = {
   type: 'input',
-  name: 'day',
-  message: 'Which day ?',
+  name: 'quest',
+  message: 'Which quest ?',
   default: () => new Date().getDate().toString(),
   validate: (input: string) => {
-    if (!DAY_REGEX.test(input)) return 'Invalid day format, must be between 1 and 25'
+    if (!QUEST_REGEX.test(input)) return 'Invalid quest format, must be between 1 and 20'
     return true
   },
 }
@@ -32,7 +32,7 @@ export const askYear = async (): Promise<EditionResponse> => {
   return { edition: response.year }
 }
 
-export const askYearAndDay = async (): Promise<EditionAndExerciceResponse> => {
-  const responses = await inquirer.prompt([yearQuestion, dayQuestion])
-  return { edition: responses.year, exercice: responses.day }
+export const askYearAndQuest = async (): Promise<EditionAndExerciceResponse> => {
+  const responses = await inquirer.prompt([yearQuestion, questQuestion])
+  return { edition: responses.year, exercice: responses.quest }
 }

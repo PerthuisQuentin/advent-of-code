@@ -7,7 +7,7 @@ const challengeQuestion: Parameters<typeof inquirer.prompt>[0] = {
   name: 'challenge',
   message: 'Which challenge ?',
   default: () => 0,
-  choices: [ChallengeName.AdventOfCode, ChallengeName.EveryBodyCodes],
+  choices: [ChallengeName.AdventOfCode, ChallengeName.EverybodyCodes],
 }
 
 export const askChallenge = async (): Promise<ChallengeName> =>

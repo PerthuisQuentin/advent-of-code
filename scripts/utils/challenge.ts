@@ -1,6 +1,6 @@
 export enum ChallengeName {
   AdventOfCode = 'Advent of Code',
-  EveryBodyCodes = 'EveryBody Codes',
+  EverybodyCodes = 'Everybody Codes',
 }
 
 export type EditionResponse = {
