@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "Codes for Advent Of Code",
   "scripts": {
-    "initDay": "tsx ./scripts/initDay.ts",
-    "updateDaysList": "tsx ./scripts/updateDaysList.ts",
+    "initFiles": "tsx ./scripts/initFiles.ts",
+    "updateFilesList": "tsx ./scripts/updateFilesList.ts",
     "lint": "eslint \"{src,scripts}/**/*.ts\" --no-fix",
     "lint:fix": "eslint \"{src,scripts}/**/*.ts\" --fix",
     "test:unit": "TZ=UTC LOG_LEVEL=0 jest --coverage",

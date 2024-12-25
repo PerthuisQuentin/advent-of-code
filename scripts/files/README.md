@@ -1,4 +1,4 @@
-# ${year} Edition - Advent of code
+# ${edition} Edition - ${challenge}
 
-Day | Parts
+${exercice} | Parts
 --- | -------------------------------------------------------------------
