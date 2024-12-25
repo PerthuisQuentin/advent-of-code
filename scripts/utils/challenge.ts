@@ -31,6 +31,7 @@ export type PartPaths = {
 
 export type Challenge = {
   name: ChallengeName
+  symbol: string
   exerciceName: string
   exerciceAmount: number
   partAmount: number

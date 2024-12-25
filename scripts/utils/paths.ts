@@ -32,14 +32,14 @@ export const getDayPaths =
   }
 
 export const getPartPaths =
-  (challengeFolderName: string, editionName: string, exerciceName: string) =>
+  (challengeFolderName: string, editionName: string, exerciceName: string, symbol: string) =>
   (year: string, day: string, part: string): PartPaths => {
     const { exercicePath } = getDayPaths(challengeFolderName, editionName, exerciceName)(year, day)
 
     const paddedDay = day.padStart(2, '0')
 
     const partPath = `${exercicePath}/part-${part}`
-    const fileName = `${year}-${paddedDay}-${part}`
+    const fileName = `${symbol.toLowerCase()}-${year}-${paddedDay}-${part}`
     const codePath = `${partPath}/${fileName}.ts`
     const testPath = `${partPath}/${fileName}.spec.ts`
 

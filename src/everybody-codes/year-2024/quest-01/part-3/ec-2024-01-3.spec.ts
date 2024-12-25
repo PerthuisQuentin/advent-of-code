@@ -2,7 +2,7 @@ import Path from 'path'
 
 import { readTestFile } from 'tests/test-files'
 
-import { getResponse } from './2024-01-3'
+import { getResponse } from './ec-2024-01-3'
 
 describe('2024-01-3', () => {
   describe('Sub methods tests', () => {})
