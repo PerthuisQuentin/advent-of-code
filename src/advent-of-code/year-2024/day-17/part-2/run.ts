@@ -2,7 +2,7 @@ import Path from 'path'
 
 import { readTestFile } from 'tests/test-files'
 
-import { parseInput } from '../part-1/2024-17-1'
+import { parseInput } from '../part-1/aoc-2024-17-1'
 
 const { input } = readTestFile(Path.join(__dirname, './test-final.txt'))
 

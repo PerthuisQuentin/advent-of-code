@@ -5,9 +5,9 @@ import { FixedGrid2D } from 'src/utils/fixed-grid-2d'
 import { delay } from 'src/utils/promises'
 import { readTestFile } from 'tests/test-files'
 
-import { Direction } from '../part-1/2024-15-1'
+import { Direction } from '../part-1/aoc-2024-15-1'
 
-import { moveRobot, parseInput, Tile } from './2024-15-2'
+import { moveRobot, parseInput, Tile } from './aoc-2024-15-2'
 
 const TILE_TO_COLOR: Record<Tile, Chalk.ChalkFunction> = {
   [Tile.EMPTY]: Chalk.dim,
