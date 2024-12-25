@@ -1,11 +1,12 @@
 import Fs from 'fs'
 
-import { getExampleFilesPaths, getPaths, getYearPaths } from './utils/paths'
-import { askYear } from './utils/prompts'
+import { askYear } from './utils/aoc-prompts'
+import { getAocPaths, getAocYearPaths } from './utils/aox-paths'
+import { getExampleFilesPaths } from './utils/example-paths'
 
 const run = async (): Promise<void> => {
   const { year } = await askYear()
-  const yearPaths = getYearPaths(year)
+  const yearPaths = getAocYearPaths(year)
   const filesPaths = getExampleFilesPaths()
 
   // Get base content
@@ -18,7 +19,7 @@ const run = async (): Promise<void> => {
   const days: string[] = []
 
   for (let day = 1; day <= 25; day++) {
-    const paths = getPaths(year, day.toString())
+    const paths = getAocPaths(year, day.toString())
     let line = `#${day.toString().padEnd(2, ' ')} | `
 
     line += Fs.existsSync(paths.code1Path)

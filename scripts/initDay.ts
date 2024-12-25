@@ -1,12 +1,13 @@
 import Fs from 'fs'
 
 import { getDayInput } from './utils/aoc-api'
-import { getExampleFilesPaths, getPaths } from './utils/paths'
-import { askYearAndDay } from './utils/prompts'
+import { askYearAndDay } from './utils/aoc-prompts'
+import { getAocPaths } from './utils/aox-paths'
+import { getExampleFilesPaths } from './utils/example-paths'
 
 const run = async (): Promise<void> => {
   const { year, day } = await askYearAndDay()
-  const paths = getPaths(year, day)
+  const paths = getAocPaths(year, day)
   const filesPaths = getExampleFilesPaths()
 
   // Create folders

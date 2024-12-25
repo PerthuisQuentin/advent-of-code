@@ -1,4 +1,4 @@
-const basePath = `./src`
+const basePath = `./src/advent-of-code`
 
 export type YearPaths = {
   yearFolderName: string
@@ -6,7 +6,7 @@ export type YearPaths = {
   readmePath: string
 }
 
-export const getYearPaths = (year: string): YearPaths => {
+export const getAocYearPaths = (year: string): YearPaths => {
   const yearFolderName = `year-${year}`
   const yearPath = `${basePath}/${yearFolderName}`
   const readmePath = `${yearPath}/README.md`
@@ -34,8 +34,8 @@ export type Paths = {
   readmePath: string
 }
 
-export const getPaths = (year: string, day: string): Paths => {
-  const { yearFolderName, yearPath, readmePath } = getYearPaths(year)
+export const getAocPaths = (year: string, day: string): Paths => {
+  const { yearFolderName, yearPath, readmePath } = getAocYearPaths(year)
 
   const paddedDay = day.padStart(2, '0')
   const dayFolderName = `day-${paddedDay}`
@@ -63,30 +63,5 @@ export const getPaths = (year: string, day: string): Paths => {
     readmePath,
     test1Path,
     test2Path,
-  }
-}
-
-export type ExampleFilesPaths = {
-  codeFilePath: string
-  testFilePath: string
-  test1FilePath: string
-  testFinalFilePath: string
-  readmePath: string
-}
-
-export const getExampleFilesPaths = (): ExampleFilesPaths => {
-  const basePath = `./scripts/files`
-  const codeFilePath = `${basePath}/code.ts`
-  const testFilePath = `${basePath}/test.spec.ts`
-  const test1FilePath = `${basePath}/test-01.txt`
-  const testFinalFilePath = `${basePath}/test-final.txt`
-  const readmePath = `${basePath}/README.md`
-
-  return {
-    codeFilePath,
-    testFilePath,
-    test1FilePath,
-    testFinalFilePath,
-    readmePath,
   }
 }
