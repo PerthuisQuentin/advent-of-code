@@ -38,7 +38,7 @@ Then filter on the test you want to run with jest cli
 ## Init day files
 
 ```
-npm run initDay
+npm run initFiles
 ```
 
 ## Update day list
