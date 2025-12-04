@@ -156,6 +156,66 @@ describe('Point2D', () => {
     })
   })
 
+  describe('getNeighborsDiagonal', () => {
+    it('should return the four diagonal neighboring points', () => {
+      const point = new Point2D({ x: 2, y: 3 })
+      const neighbors = point.getNeighborsDiagonal()
+
+      expect(neighbors).toEqual([
+        new Point2D({ x: 1, y: 2 }),
+        new Point2D({ x: 1, y: 4 }),
+        new Point2D({ x: 3, y: 2 }),
+        new Point2D({ x: 3, y: 4 }),
+      ])
+    })
+
+    it('should return the correct diagonal neighbors for a point at the origin', () => {
+      const point = new Point2D({ x: 0, y: 0 })
+      const neighbors = point.getNeighborsDiagonal()
+
+      expect(neighbors).toEqual([
+        new Point2D({ x: -1, y: -1 }),
+        new Point2D({ x: -1, y: 1 }),
+        new Point2D({ x: 1, y: -1 }),
+        new Point2D({ x: 1, y: 1 }),
+      ])
+    })
+  })
+
+  describe('getNeighborsAll', () => {
+    it('should return all eight neighboring points', () => {
+      const point = new Point2D({ x: 2, y: 3 })
+      const neighbors = point.getNeighborsAll()
+
+      expect(neighbors).toEqual([
+        new Point2D({ x: 1, y: 3 }),
+        new Point2D({ x: 2, y: 2 }),
+        new Point2D({ x: 3, y: 3 }),
+        new Point2D({ x: 2, y: 4 }),
+        new Point2D({ x: 1, y: 2 }),
+        new Point2D({ x: 1, y: 4 }),
+        new Point2D({ x: 3, y: 2 }),
+        new Point2D({ x: 3, y: 4 }),
+      ])
+    })
+
+    it('should return all eight neighbors for a point at the origin', () => {
+      const point = new Point2D({ x: 0, y: 0 })
+      const neighbors = point.getNeighborsAll()
+
+      expect(neighbors).toEqual([
+        new Point2D({ x: -1, y: 0 }),
+        new Point2D({ x: 0, y: -1 }),
+        new Point2D({ x: 1, y: 0 }),
+        new Point2D({ x: 0, y: 1 }),
+        new Point2D({ x: -1, y: -1 }),
+        new Point2D({ x: -1, y: 1 }),
+        new Point2D({ x: 1, y: -1 }),
+        new Point2D({ x: 1, y: 1 }),
+      ])
+    })
+  })
+
   describe('isOnSameLine', () => {
     it('should return true if the points are on the same X', () => {
       const point1 = new Point2D({ x: 1, y: 2 })

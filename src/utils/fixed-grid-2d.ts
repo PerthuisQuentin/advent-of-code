@@ -90,9 +90,23 @@ export class FixedGrid2D<T> {
     this.updateBounds(cell)
   }
 
-  getNeighbors(point: Point2D): Cell2D<T>[] {
+  public getNeighbors(point: Point2D): Cell2D<T>[] {
     return point
       .getNeighbors()
+      .map((position) => this.getCell(position))
+      .filter((cell) => cell !== undefined)
+  }
+
+  public getNeighborsDiagonal(point: Point2D): Cell2D<T>[] {
+    return point
+      .getNeighborsDiagonal()
+      .map((position) => this.getCell(position))
+      .filter((cell) => cell !== undefined)
+  }
+
+  public getNeighborsAll(point: Point2D): Cell2D<T>[] {
+    return point
+      .getNeighborsAll()
       .map((position) => this.getCell(position))
       .filter((cell) => cell !== undefined)
   }

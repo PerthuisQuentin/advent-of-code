@@ -52,6 +52,19 @@ export class Point2D {
     ]
   }
 
+  public getNeighborsDiagonal(): Point2D[] {
+    return [
+      new Point2D({ x: this.x - 1, y: this.y - 1 }),
+      new Point2D({ x: this.x - 1, y: this.y + 1 }),
+      new Point2D({ x: this.x + 1, y: this.y - 1 }),
+      new Point2D({ x: this.x + 1, y: this.y + 1 }),
+    ]
+  }
+
+  public getNeighborsAll(): Point2D[] {
+    return [...this.getNeighbors(), ...this.getNeighborsDiagonal()]
+  }
+
   public isOnSameLine(point: Point2D): boolean {
     return this.x === point.x || this.y === point.y
   }
