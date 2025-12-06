@@ -20,7 +20,7 @@ describe('2024-16-1', () => {
       expect(getResponse(input)).toEqual(output)
     })
 
-    fit('Test-03', () => {
+    it('Test-03', () => {
       const { input, output } = readTestFile(Path.join(__dirname, './test-03.txt'))
 
       expect(getResponse(input)).toEqual(output)
