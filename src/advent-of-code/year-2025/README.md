@@ -8,7 +8,7 @@ Day | Parts
 #4  | [Part 1](./day-04/part-1/aoc-2025-04-1.ts) - [Part 2](./day-04/part-2/aoc-2025-04-2.ts)
 #5  | [Part 1](./day-05/part-1/aoc-2025-05-1.ts) - [Part 2](./day-05/part-2/aoc-2025-05-2.ts)
 #6  | [Part 1](./day-06/part-1/aoc-2025-06-1.ts) - [Part 2](./day-06/part-2/aoc-2025-06-2.ts)
-#7  | Soon™ - Soon™
+#7  | [Part 1](./day-07/part-1/aoc-2025-07-1.ts) - [Part 2](./day-07/part-2/aoc-2025-07-2.ts)
 #8  | Soon™ - Soon™
 #9  | Soon™ - Soon™
 #10 | Soon™ - Soon™
